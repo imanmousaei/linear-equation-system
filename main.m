@@ -14,6 +14,7 @@ close all
 n = 2;
 maxValue = 1000;
 precision = 1e-2;
+omega = 1/2;
 
 for i=1:n
     b(i) = rand*maxValue;
@@ -34,7 +35,7 @@ x
 
 
 %% solve with SOR method
-x = SOR(a,b,precision);
+x = sor(a,b,omega,precision);
 x
 
 
