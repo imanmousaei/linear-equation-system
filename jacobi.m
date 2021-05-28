@@ -1,4 +1,4 @@
-function x = gaus_seidel(a,b)
+function x = jacobi(a,b)
     n = size(b,1);
     
     for i=1:n

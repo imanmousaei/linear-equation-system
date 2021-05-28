@@ -22,7 +22,18 @@ for i=1:n
 end
 
 
-%% 
-a
-b
+%% solve with jacobi method
+x = gaus_seidel(a,b);
+x
+
+
+%% solve with gaus-seidel method
+x = gaus_seidel(a,b);
+x
+
+
+%% solve with SOR method
+x = SOR(a,b);
+x
+
 

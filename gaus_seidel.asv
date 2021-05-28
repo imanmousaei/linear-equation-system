@@ -1,0 +1,4 @@
+function x = gaus_seidel(a,b)
+    
+
+end
