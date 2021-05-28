@@ -28,18 +28,13 @@ close all
 n = input('n = ');
 precision = input('precision = ');
 omega = input('omega = ');
-for i=1:n
-    for j=1:n
-        a(i,j) = input( strcat('a[', num2str(i), '][', num2str(j), '] = ') );
-    end
-end
+% for i=1:n
+%     b(i) = rand*maxValue;
+%     for j=1:n
+%         a(i,j) = rand*maxValue;
+%     end
+% end
 
-for i=1:n
-    b(i) = input( strcat('b[', num2str(i), '] = ') );
-end
-
-a
-b
 
 
 %% solve with jacobi method
