@@ -10,17 +10,19 @@ close all
 %   sigma(a[i][j]*x[j], j=1:n) = b[i]
 
 
-%% vars
-n = 10;
+%% init vars
+n = 2;
 maxValue = 1000;
 
 for i=1:n
-    b[i] = rand*maxValue;
+    b(i) = rand*maxValue;
     for j=1:n
-        a[i][j] = rand*maxValue;
+        a(i,j) = rand*maxValue;
     end
 end
 
 
 %% 
+a
+b
 
