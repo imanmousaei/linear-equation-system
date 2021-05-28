@@ -1,15 +1,29 @@
-function x = gaus_seidel(a,b)
+function x = gaus_seidel(a,b,precision)
     n = size(b,1);
     
-    for i=1:n
-        sigma = 0;
-        for j=1:n
-            if j==i
-                continue
+    x = zeros(1,n);
+    precise = false;
+    
+    while ~precise
+        precise = true;
+        for i=1:n
+            prev = x(i);
+
+            sigma1 = 0;
+            for j=1:i-1
+                sigma1 = sigma1 + a(i,j) * x(j);
             end
-            sigma = sigma + a(i,j) * x(j);
+
+            sigma2 = 0;
+            for j=i+1
+                sigma2 = sigma2 + a(i,j) * x(j);
+            end
+
+            x(i) = (b(i) - sigma1 - sigma2) / a(i,i);
+            
+            if abs(x(i)-prev) > precision
+                precise = false;
+            end
         end
-        
-        x(i) = (b(i)-sigma) / a(i,i);
     end
 end

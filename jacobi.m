@@ -1,4 +1,4 @@
-function x = jacobi(a,b)
+function x = jacobi(a,b,precision)
     n = size(b,1);
     
     for i=1:n

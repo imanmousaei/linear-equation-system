@@ -13,6 +13,7 @@ close all
 %% init vars
 n = 2;
 maxValue = 1000;
+precision = 1e-2;
 
 for i=1:n
     b(i) = rand*maxValue;
@@ -23,17 +24,17 @@ end
 
 
 %% solve with jacobi method
-x = gaus_seidel(a,b);
+x = gaus_seidel(a,b,precision);
 x
 
 
 %% solve with gaus-seidel method
-x = gaus_seidel(a,b);
+x = gaus_seidel(a,b,precision);
 x
 
 
 %% solve with SOR method
-x = SOR(a,b);
+x = SOR(a,b,precision);
 x
 
 
