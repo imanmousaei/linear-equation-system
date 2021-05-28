@@ -12,7 +12,7 @@ close all
 
 %% init vars
 n = 2;
-maxValue = 1000;
+maxValue = 100;
 precision = 1e-2;
 omega = 1/2;
 

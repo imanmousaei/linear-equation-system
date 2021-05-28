@@ -1,7 +1,7 @@
 function x = jacobi(a,b,precision)
-    n = size(b,1);
+    n = size(b,2);
     
-    x = zeros(1,n);
+    x = ones(1,n);
     precise = false;
     
     while ~precise

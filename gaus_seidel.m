@@ -1,7 +1,7 @@
 function x = gaus_seidel(a,b,precision)
-    n = size(b,1);
+    n = size(b,2);
     
-    x = zeros(1,n);
+    x = ones(1,n);
     precise = false;
     
     while ~precise
@@ -15,7 +15,7 @@ function x = gaus_seidel(a,b,precision)
             end
 
             sigma2 = 0;
-            for j=i+1
+            for j=i+1:n
                 sigma2 = sigma2 + a(i,j) * x(j);
             end
 
